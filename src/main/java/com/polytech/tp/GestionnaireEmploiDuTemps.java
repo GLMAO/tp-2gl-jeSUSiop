@@ -3,7 +3,7 @@ package com.polytech.tp;
 import java.util.ArrayList;
 import java.util.List;
 
-public class GestionnaireEmploiDuTemps {
+public class GestionnaireEmploiDuTemps implements Subject {
     private List<ICours> listeCours = new ArrayList<>();
     private List<Observer> observers = new ArrayList<>();
 
@@ -23,18 +23,16 @@ public class GestionnaireEmploiDuTemps {
 
     public void setChangement(String string) {
         notifyObservers(string);
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'setChangement'");
     }
-    public void addObserver(Observer o) {
+    public void attach(Observer o) {
         observers.add(o);
     }
 
-    public void removeObserver(Observer o) {
+    public void detach(Observer o) {
         observers.remove(o);
     }
 
-    private void notifyObservers(String message) {
+    public  void notifyObservers (String message) {
         for (Observer o : observers) {
             o.update(message);
         }
