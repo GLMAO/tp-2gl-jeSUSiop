@@ -3,3 +3,9 @@ CS(5)
 
 
 ![alt text](<لقطة شاشة 2025-11-20 145821.png>)
+
+
+La classe GestionnaireEmploiDuTemps viole le principe de responsabilité unique (SRP) car elle gère à la fois l’ajout et la suppression des observateurs et l’envoi des notifications, ce qui lui donne plusieurs responsabilités.
+
+
+donc le code  ne respecte pas tout les principes de conception logicielle
